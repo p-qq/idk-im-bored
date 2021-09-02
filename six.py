@@ -44,7 +44,7 @@ async def scrape():
   await client.wait_until_ready()
   guil = client.get_guild(int(guild))
   members = await guil.chunk()
-  with open('scrapedf.txt', "w+") as p:
+  with open('scraped.txt', "w+") as p:
     for member in members:
       cum += 1
       p.write(str(member.id) + "\n")
